@@ -1,44 +1,55 @@
-let slideIndex = 0;
+let slideIndex = 1;
 let slideInterval = setInterval(showSlides, 10000); // Start automatic slideshow
 let isPaused = false;
 
-function showSlides() {
+function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+
+    if (n) {
+        slideIndex = n;
+    } else {
+        slideIndex++;
     }
-    slideIndex++;
+
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
+    if (slideIndex < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
 
 function plusSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    slideIndex += n - 1;
-    if (slideIndex >= slides.length) {slideIndex = 0}
-    if (slideIndex < 0) {slideIndex = slides.length - 1}
-    showSlides();
+    showSlides(slideIndex + n);
+}
+
+function currentSlide(n) {
+    showSlides(n);
 }
 
 function togglePause() {
-    const pauseButton = document.getElementById("pause-button");
     if (isPaused) {
         slideInterval = setInterval(showSlides, 10000);
-        pauseButton.innerHTML = "&#10074;&#10074;"; // Pause symbol
+        document.getElementById("pause-button").innerHTML = "&#10074;&#10074;"; // Pause symbol
     } else {
         clearInterval(slideInterval);
-        pauseButton.innerHTML = "&#9658;"; // Play symbol
+        document.getElementById("pause-button").innerHTML = "&#9658;"; // Play symbol
     }
     isPaused = !isPaused;
 }
 
 // Initialize slideshow
-showSlides();
+showSlides(slideIndex);

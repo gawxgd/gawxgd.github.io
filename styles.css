@@ -192,10 +192,9 @@ p.font-effect-anaglyph {
 
 /* Adjusted Next and Previous buttons */
 .prev, .next {
-    transform: translate(-50%, -50%);
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Vertically center the arrows */
+    top: 45%;
     width: auto;
     padding: 16px;
     color: white;
