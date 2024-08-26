@@ -308,3 +308,90 @@ body.dark-mode {
 {
     color:mediumslateblue;
 }
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 30px; /* Reduce the base font size */
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .main-content {
+        margin-bottom: 30px;
+        max-width: 100%; /* Make the main content span the full width */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .text-block, .image-block {
+        width: 100%; /* Full width blocks on mobile */
+    }
+
+    .block-title {
+        font-size: 24px; /* Adjust the title font size */
+    }
+
+    .topnav a {
+        float: none;
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        padding: 12px; /* Adjust padding for top navigation */
+    }
+
+    .dark-mode-button {
+        float: none;
+        margin: 10px 0;
+        width: 100%;
+        padding: 14px 0; /* Full width button with padding */
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 100%; /* Ensure the slideshow is responsive */
+    }
+
+    .prev, .next {
+        top: 40%;
+        padding: 12px;
+        font-size: 16px; /* Reduce arrow size */
+    }
+
+    #pause-button {
+        padding: 8px 16px; /* Reduce pause button size */
+        font-size: 14px;
+    }
+
+    /* Dots for slideshow */
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 2px;
+    }
+}
+
+/* Further smaller devices like small phones */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+
+    .block-title {
+        font-size: 20px;
+    }
+
+    .topnav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .dark-mode-button {
+        font-size: 14px;
+    }
+}
