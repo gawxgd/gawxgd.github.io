@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Inter&effect=anaglyph');
+
 
 * {
     margin: 0;
     padding: 0;
-    background: rgb(203, 203, 203);
     box-sizing: border-box;
 }
 
 body {
+    background: white;
     font-family: 'Inter', Serif;
     font-size: 50px;
+}
+p.section-text
+{
+    color: mediumslateblue;
+    font-weight: 800;
 }
 
 p.font-effect-anaglyph {
@@ -41,19 +46,25 @@ p.font-effect-anaglyph {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid mediumslateblue;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
     position: relative;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
+
 
 .contact-block {
     font-size: 30px;
-    border: 1px solid mediumslateblue;
     border-radius: 15px;
     padding: 20px;
     margin-top: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+}
+.contact-block.dark-mode
+{
+    border: 2px solid mediumslateblue;
 }
 
 .text-block {
@@ -69,7 +80,6 @@ p.font-effect-anaglyph {
 .content-image {
     max-width: 100%;
     height: auto;
-    border-radius: 15px;
     opacity: 1;
     display: block;
     transition: .5s ease;
@@ -117,6 +127,7 @@ p.font-effect-anaglyph {
     font-size: 17px;
     background-color: white;
     font-weight: bold;
+    height: 50px;
 }
 
 .topnav a:hover {
@@ -157,6 +168,76 @@ p.font-effect-anaglyph {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+#pause-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+}
+
+#pause-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Adjusted Next and Previous buttons */
+.prev, .next {
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Vertically center the arrows */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+/* Show arrows only on hover */
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next,
+.slideshow-container:hover #pause-button{
+    opacity: 1; /* Show on hover */
+}
+
+.prev:hover, .next:hover {
+    opacity: 1; /* Ensure opacity stays at 1 when hovered */
+}
+
+/* Ensure that slides don't exceed the container width */
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
 
 .active {
     background-color: #717171;
@@ -171,4 +252,60 @@ p.font-effect-anaglyph {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.topnav.dark-mode {
+    background-color: #222;
+}
+
+.topnav a.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.topnav a.dark-mode:hover {
+    background-color: #40E0D0;
+    color: white;
+}
+
+.topnav a.active.dark-mode {
+    background-color: mediumslateblue;
+    color: white;
+}
+
+.content.dark-mode {
+    border: 2px solid mediumslateblue;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.text.dark-mode {
+    background-color: #444;
+    color: white;
+}
+.dark-mode-button
+{
+    float: right;
+    background-color: black;
+    color: mediumslateblue;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0;
+    margin-left: auto;
+    text-align: center;
+    height: 100%;
+}
+.dark-mode-button.dark-mode{
+    background-color: white;
+    color:mediumslateblue;
+}
+.block-title
+{
+    color:mediumslateblue;
 }

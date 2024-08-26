@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Inter&effect=anaglyph" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Portfolio</title>
+    <script src="darkMode.js" defer></script>
 </head>
 <body>
 <div class="topnav">
     <a class="active" href="index.html">Home</a>
     <a href="Spotify%20Game.html">Spotify Game</a>
     <a href="#projects">Group Chat</a>
-    <a href="#projects">Image Labeling</a>
+    <a href="imageLabel.html">Image Labeling</a>
     <a href="contact.html">Contact</a>
+    <button id="theme-toggle" class="dark-mode-button">Dark Mode</button>
 </div>
 <div class="wrap">
     <div class="container">
         <div class="main-content">
-            <p class="font-effect-anaglyph">Hi,</p>
-            <p class="font-effect-anaglyph">I am Marcin Gronicki</p>
+            <p class="section-text">Hi,</p>
+            <p class="section-text">I am Marcin Gronicki</p>
         </div>
 
         <a href="Spotify%20Game.html" class="content" style="text-decoration: none; color: inherit;">
             <div class="text-block">
-                <b>Spotify Game</b>
+                <b class="block-title">Spotify Game</b>
                 <p>Multiplayer tcp/ip game, where players are guessing each others favourite songs.</p>
                 <b>C#, Avalonia, OAuth2.0, Spotify Api, TCP/IP</b>
             </div>
@@ -40,7 +44,7 @@
         <!-- For Group Chat -->
         <a href="#projects" class="content" style="text-decoration: none; color: inherit;">
             <div class="text-block">
-                <b>Group Chat</b>
+                <b class="block-title">Group Chat</b>
                 <p>TCP/IP group chat, with server application allowing to manage connected clients</p>
                 <b>C#, Windows Forms, TCP/IP</b>
             </div>
@@ -55,7 +59,7 @@
         <!-- For Image Labeling -->
         <a href="#projects" class="content" style="text-decoration: none; color: inherit;">
             <div class="text-block">
-                <b>Image Labeling</b>
+                <b class="block-title">Image Labeling</b>
                 <p>Application that allows browsing images saved on disk and then adding to them colored and named labels</p>
                 <b>C#, WPF</b>
             </div>
