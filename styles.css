@@ -42,6 +42,7 @@ p.font-effect-anaglyph {
     max-width: 50%;
 }
 
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -111,6 +112,15 @@ p.font-effect-anaglyph {
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+}
+.about-text
+{
+    background-color: mediumslateblue;
+    color: white;
+    font-size: 25px;
+    padding: 16px 32px;
+    margin-bottom: 50px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .topnav {
@@ -310,7 +320,7 @@ body.dark-mode {
 }
 @media screen and (max-width: 768px) {
     body {
-        font-size: 30px; /* Reduce the base font size */
+        font-size: 20px; /* Reduce the base font size */
     }
 
     .container {
@@ -321,6 +331,10 @@ body.dark-mode {
         margin-bottom: 30px;
         max-width: 100%; /* Make the main content span the full width */
         text-align: center; /* Center text on smaller screens */
+    }
+    .section-text
+    {
+        font-size: 50px;
     }
 
     .content {
@@ -379,7 +393,7 @@ body.dark-mode {
 /* Further smaller devices like small phones */
 @media screen and (max-width: 480px) {
     body {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .block-title {
@@ -393,5 +407,9 @@ body.dark-mode {
 
     .dark-mode-button {
         font-size: 14px;
+    }
+    .section-text
+    {
+        font-size: 30px;
     }
 }
