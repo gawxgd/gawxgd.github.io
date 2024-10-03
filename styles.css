@@ -122,7 +122,22 @@ p.font-effect-anaglyph {
     margin-bottom: 50px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
+.about-list {
+    background-color: mediumslateblue; 
+    color: white; 
+    font-size: 25px; 
+    padding: 16px 32px; 
+    margin-bottom: 50px; 
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    list-style-type: disc; 
+}
 
+.about-list li {
+    margin-bottom: 1px; 
+}
+.current-progress {
+    margin: 20px 0; 
+}
 .topnav {
     background-color: #333;
     overflow: hidden;
