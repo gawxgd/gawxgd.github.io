@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spotify Game</title>
+    <script src="slideshow.js" defer></script>
+    <script src="darkMode.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="carRental.html">Car Rental</a>
+    <a href="Spotify%20Game.html">Spotify Game</a>
+    <a href="contact.html">Contact</a>
+    <button id="theme-toggle" class="dark-mode-button">Dark Mode</button>
+</div>
+
+<div class="wrap">
+    <div class="container">
+        <div class="main-content">
+            <p class="section-text">Car Rental</p>
+        </div>
+        <div class="about-text">
+            <p>
+                The project involves creating a <strong>comprehensive system for car rentals</strong>, which consists of three main components:
+            </p>
+            <br/>
+
+            <ul class="components-list">
+                <li>
+                    <strong>Web Application (CarRentalComparerApp):</strong>
+                    Allows users to browse, filter, and compare rental car offers from various providers.
+                </li>
+
+                <li>
+                    <strong>Car Rental Comparer API (ComparerAPI):</strong>
+                    Serves as an intermediary between the web application and car providers, managing communication and data exchange.
+                    It allows integration of different Providers' APIs (adapter design pattern).
+                </li>
+
+                <li>
+                    <strong>Car Provider API (ProviderAPI):</strong>
+                    API of a car rental company, allowing users to rent and return cars.
+                </li>
+            </ul>
+
+            <p>
+                The system has been designed with <strong>flexibility</strong> and <strong>ease of extension</strong> in mind, allowing the addition of new car providers in the future.
+                Each provider will be able to share their resources through a dedicated API, ensuring <strong>scalability</strong> and the ability to integrate with various partners.
+            </p>
+            </br>
+
+            <p>
+                An additional assumption of the system is the possibility of collaboration with other project teams, who will deliver their own car provider APIs.
+                This ensures <strong>extensive possibilities</strong> for expanding the system with new functionalities.
+            </p>
+        </div>
+        <div class="slideshow-container">
+            <button id="pause-button" onclick="togglePause()" style="color: white">&#10074;&#10074;</button>
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 9</div>
+                <img src="home.png">
+                <div class="text">Home page, brands from different car rental providers</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 9</div>
+                <img src="car-filters.png">
+                <div class="text">Available cars list with complex filters</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 9</div>
+                <img src="profile-management.png">
+                <div class="text">User profile management</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 9</div>
+                <img src="user-rentals-active.png" style="width:100%">
+                <div class="text">List of active user rentals</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 9</div>
+                <img src="offers-google-map.png" style="width:100%">
+                <div class="text">Generating offers from different car rental providers</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 9</div>
+                <img src="dashboard-confirm-rentals.png" style="width:100%">
+                <div class="text">Employees can accept returns</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 9</div>
+                <img src="dashboard-rental-history.png" style="width:100%">
+                <div class="text">Employees can view rental history</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 9</div>
+                <img src="excel-report-table.png" style="width:100%">
+                <div class="text">Employees can generate reports</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 9</div>
+                <img src="email-confirm-rental.png" style="width:100%">
+                <div class="text">Email notification system</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

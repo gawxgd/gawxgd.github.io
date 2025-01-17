@@ -333,6 +333,15 @@ body.dark-mode {
 {
     color:mediumslateblue;
 }
+.components-list {
+    margin-left: 20px; /* Adds indentation for the entire list */
+    padding-left: 10px; /* Additional space for bullet points */
+}
+
+.components-list li {
+    margin-bottom: 15px; /* Adds space between each list item */
+    line-height: 1.6; /* Improves readability of the text */
+}
 @media screen and (max-width: 768px) {
     body {
         font-size: 20px; /* Reduce the base font size */
