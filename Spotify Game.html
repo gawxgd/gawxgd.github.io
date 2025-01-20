@@ -14,9 +14,8 @@
 <body>
 <div class="topnav">
     <a href="index.html">Home</a>
+    <a href="carRental.html">Car Rental</a>
     <a class="active" href="Spotify%20Game.html">Spotify Game</a>
-    <a href="groupChat.html">Group Chat</a>
-    <a href="imageLabel.html">Image Labeling</a>
     <a href="contact.html">Contact</a>
     <button id="theme-toggle" class="dark-mode-button">Dark Mode</button>
 </div>
@@ -31,52 +30,66 @@
         knowledge of their friends' <strong>music tastes</strong>. By leveraging the <strong>Spotify API</strong> for <strong>real-time data</strong>, 
         players are challenged to guess who is listening to a particular <strong>song</strong> or <strong>artist</strong>. 
         The game supports <strong>login</strong> and <strong>authorization</strong> through <strong>Spotify's OAuth 2.0</strong>, and once logged in, 
-        users can see their <strong>Spotify username</strong> and <strong>profile photo</strong>. The game also supports <strong>session</strong> 
-        creation and joining, allowing friends to <strong>play together</strong>. Additionally, there is a built-in <strong>chat feature</strong> 
-        for players to communicate during the game.
+            users can see their <strong>Spotify Profile</strong>. The game also supports <strong>session</strong>
+        creation and joining, allowing friends to <strong>play together</strong>.
 
         </p>
-        <p class="current-progress" ><strong>
-            Current Progress:
-        </strong></p>
-        <ul>
-            <li><strong>Login & Authorization:</strong> Fully functional Spotify login with OAuth 2.0.</li>
-            <li><strong>User Data Retrieval:</strong> Fetches username and profile picture from Spotify.</li>
-            <li><strong>Session Management:</strong> Players can create and join game sessions.</li>
-            <li><strong>Chat Feature:</strong> Players can communicate with each other during gameplay.</li>
-            <li><strong>Upcoming Improvements:</strong> Layout and UI/UX enhancements for a better player experience.</li>
-        </ul>
         </div>
-        <div class="slideshow-container">
+        <div class="slideshow-container2">
             <button id="pause-button" onclick="togglePause()" style="color: white">&#10074;&#10074;</button>
 
 
             <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
-                <img src="game1.png">
+                <div class="numbertext">1 / 10</div>
+                <img src="login.jpg" style="height: 500px; width: auto">
                 <div class="text">Login with Spotify acount</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
-                <img src="game2.png">
-                <div class="text">Spotify API OAuth2.0 authorization</div>
+                <div class="numbertext">2 / 10</div>
+                <img src="home.jpg" style="height: 500px; width: auto">
+                <div class="text">Home page</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 5</div>
-                <img src="game3.png">
-                <div class="text">Join or create game session, spotify API username and user profile photo request</div>
+                <div class="numbertext">3 / 10</div>
+                <img src="drawer.jpg" style="height: 500px; width: auto">
+                <div class="text">Side menu</div>
             </div>
             <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
-                <img src="game4.png" style="width:100%">
-                <div class="text">Start game by providing existing session name or code and password</div>
+                <div class="numbertext">4 / 10</div>
+                <img src="stats.jpg" style="height: 500px; width: auto">
+                <div class="text">Spotify stats</div>
             </div>
             <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
-                <img src="game5.png" style="width:100%">
-                <div class="text">At current stage after joining session is working chat instead of game. Chat will be displayed on side during real game</div>
+                <div class="numbertext">5 / 10</div>
+                <img src="setup.jpg" style="height: 500px; width: auto">
+                <div class="text">Choose game rules</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 10</div>
+                <img src="dialog.jpg" style="height: 500px; width: auto">
+                <div class="text">Custom leaving confirmation PopScope</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="gameLobby.png" style="height: 500px; width: auto">
+                <div class="text">Users can join game by entering room pin, scanning QR, or using deepLink, host can kick users</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="question.png" style="height: 500px; width: auto">
+                <div class="text">At the start of the game there is created dictionary of songs and users, users have to guess who listens to displayed song</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="answer.pnh.png" style="height: 500px; width: auto">
+                <div class="text">At the round timeout or when host clicks skip correct answers are displayed</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="leaderboard.pnh.png" style="height: 500px; width: auto">
+                <div class="text">At the end of each round leaderboard is displayed</div>
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -87,6 +100,12 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+
         </div>
     </div>
 </div>
